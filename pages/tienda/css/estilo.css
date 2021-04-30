@@ -1,0 +1,42 @@
+body{
+    
+    font-family: Calibri;
+    padding: 10px 20px;
+}
+
+h1 {
+	color: #FFFFFF;
+	background-color: #ffbd33;
+	padding: 10px;
+	border-radius:0 20px;
+}
+
+.caja_imagenes{display: flex;}
+.imagen{width: 20%;}
+img {max-width: 100%;}
+.im{position: relative;}
+.precios{
+	position: absolute;
+	background-color: goldenrod;
+	left:0px; 
+	right:0px; 
+	bottom:0px; 
+	height:50px; 
+	z-index:0;
+	font-size: 200%;
+	text-align: center;
+}
+#comprar{
+	position:absolute;
+	bottom:5px;
+	right:170px;
+	font-size:17px;    
+    font-weight:bold;
+    color:white;
+    background:#638cb5;
+    border:0px;
+    width:180px;
+    height: 40px;
+}
+
+

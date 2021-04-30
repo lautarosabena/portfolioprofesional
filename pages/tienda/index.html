@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tienda</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(inicio);
+        imagenes=["heladera.png", "camara.png", "tele.png", "micro.png", "plancha.png"];
+        descripcion=["Heladera", "Camara", "Television", "Microondas", "Plancha"];
+        precios= ["$500", "$200", "$450", "$300", "$150"];
+        function inicio(){            
+            $(".caja_imagenes").html("<div class='imagen'><img class='im' src='img/"+imagenes[0]+"'></div> <div class='imagen'><img class='im' src='img/"+imagenes[1]+"'></div> <div class='imagen'><img class='im' src='img/"+imagenes[2]+"'></div> <div class='imagen'><img class='im' src='img/"+imagenes[3]+"'></div> <div class='imagen'><img class='im' src='img/"+imagenes[4]+"'></div>");
+            $(document).on("click", ".im", function(){
+                $(this).animate({"top":"200px"},550,mostrar_precio);
+                indice=$(this).parent().index();
+            })
+        }
+        function mostrar_precio(){
+            var vDescripcion = descripcion[indice];
+            var vPrecios = precios[indice];          
+            $(".precios").css({"font-size": "200%", "text-align": "center", "bottom": "0px", "right": "0px"});
+            $(".precios").html("<strong>Precios: </strong>" + vDescripcion +" "+ vPrecios + "<button id='comprar'>Comprar</button>");                        
+            $("#comprar").click(comprar);
+        }
+        function comprar(){
+            alert("Has comprado " + descripcion[indice] + " por " + precios[indice]);
+        }
+    </script>
+</head>
+<body>	
+		<h1>Tienda con Javascript y jQuery</h1>
+        <div class="caja_imagenes"></div>
+        <div class="precios"><strong>Precios: </strong></div>
+</body>
+</html>
