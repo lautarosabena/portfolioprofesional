@@ -147,19 +147,19 @@
         <div class="card">
           <div class="card-block">
             <h2>Contacto</h2>
-            <form action="" class="reveal-content" name="contact" data-netlify="true" method="POST">
-              <div class="form-group">
-                <input type="email" class="form-control" id="email" placeholder="Email">
-              </div>
-              <div class="form-group">
-                <input type="text" class="form-control" id="subject" placeholder="Tema">
-              </div>
-              <div class="form-group">
-                <textarea class="form-control" rows="5" placeholder="Ingrese su mensaje"></textarea>
-              </div>
-              <div class="form-group">
-                <button type="submit" class=" btn btn-primary">Enviar mensaje</button>
-              </div> 
+            <form name="contact" method="POST" data-netlify="true">
+              <p>
+                <label><input type="text" name="name" class="form-control" placeholder="Tema"/></label>   
+              </p>
+              <p>
+                <label><input type="email" name="email" class="form-control" placeholder="Email" /></label>
+              </p>       
+              <p>
+                <label><textarea name="message" class="form-control" placeholder="Ingrese su mensaje"></textarea></label>
+              </p>
+              <p>
+              <button type="submit" class=" btn btn-primary">Enviar mensaje</button>
+              </p>
             </form>
           </div>
         </div>
